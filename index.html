@@ -27,7 +27,17 @@
 </head>
 <body>
 <div class="container">
-  <img src="foto.png" alt="Immagine Centrata">
+  <img id="immagine" src="foto.png" alt="Immagine Centrata">
+  <br>
+  <button onclick="aumentaDimensione()">Aumenta Dimensione</button>
 </div>
+
+<script>
+function aumentaDimensione() {
+  var img = document.getElementById("immagine");
+  var larghezzaAttuale = img.width;
+  img.style.width = (larghezzaAttuale + 20) + "px"; // Aumenta di 20px la larghezza ogni volta che il bottone viene cliccato
+}
+</script>
 </body>
 </html>
