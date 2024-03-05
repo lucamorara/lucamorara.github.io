@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-    <title>Mio Sito Web su GitHub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sito</title>
+<style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Sfondo leggermente grigio per evidenziare il centro */
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100vh; /* Assicura che l'immagine non superi l'altezza della viewport */
+    display: block; /* Rimuove eventuali spazi extra sotto l'immagine */
+  }
+</style>
 </head>
 <body>
-    <h1>Ciao, mondo!</h1>
-    <p>Benvenuto sul mio sito web ospitato con GitHub Pages.</p>
+<div class="container">
+  <img src="foto.png" alt="Immagine Centrata">
+</div>
 </body>
 </html>
