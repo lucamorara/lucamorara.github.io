@@ -15,6 +15,26 @@
     <div id="output"></div>
 
     <script>
+        function findWords() {
+            var wordLength = parseInt(document.getElementById('wordLength').value);
+            var excludedWord = document.getElementById('excludedWord').value.trim();
+            var outputDiv = document.getElementById('output');
+            
+            // Controllo se la lunghezza è un numero valido
+            if (isNaN(wordLength) || wordLength < 1) {
+                outputDiv.innerHTML = "Inserisci una lunghezza valida.";
+                return;
+            }
+
+            var filteredWords = calcolaParole(excludedWord.split(''), wordLength);
+            
+            if (filteredWords.length === 0) {
+                        outputDiv.innerHTML = "Nessuna parola trovata.";
+                    } else {
+                        outputDiv.innerHTML = "Parole trovate:<br>" + filteredWords.join("<br>");
+                    }
+        }
+        
         function calcolaParole(lettere, numero) {
     var fs = require('fs');
     var listaPossibiliParole = [];
